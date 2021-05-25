@@ -3,10 +3,10 @@ MAINTAINER rockonit2015@gmail.com
 RUN yum install -y httpd \
   zip \
  unzip
-ADD https://github.com/ColorlibHQ/unapp/archive/master.zip
+ADD https://free-css.com/assets/files/free-css-templates/download/page258/loxury.zip /var/www/html/
 WORKDIR /var/www/html
-RUN unzip unapp-master.zip
-RUN cp -rvf unapp-master/*
-RUN rm -rf unapp-master unapp-master.zip
+RUN unzip loxury.zip
+RUN cp -rvf loxury/* .
+RUN rm -rf loxury loxury.zip
 CMD ["/usr/sbin/httpd", "-D",   "FOREGROUND"]
 EXPOSE 80
